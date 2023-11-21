@@ -1,5 +1,7 @@
 import React /*{ useEffect, useRef }*/ from 'react';
 // import { connect } from 'react-redux';
+import 'tailwindcss/tailwind.css';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../Navigation';
 import Sidebar from '../Sidebar';
@@ -31,7 +33,7 @@ function DashboardFasilitator(props) {
           <div className="news-card r-10px">
             <h5 className="news-title">News</h5>
             <div className="news-image-container">
-              <img
+              <Image
                 className="w-100"
                 src={news}
                 alt="microsoft"
@@ -42,7 +44,7 @@ function DashboardFasilitator(props) {
           <div className="news-card r-10px mt-3">
             <div className="flex justify-between">
               <h5 className="news-title px-5">My Class</h5>
-              <img src={calendar} alt="" className="px-4" />
+              <Image src={calendar} alt="" className="px-4" />
             </div>
             <h5 className="news-title px-5 text-center">October 2020</h5>
             <div className="news-image-container mt-3">
@@ -73,14 +75,14 @@ function DashboardFasilitator(props) {
 
                 <div className="flex justify-center items-center mb-4 mt-3">
                   <Link href="/Dashboard" className="btn btn-primary-color r-15px" type="button">
-                      <img src={task} className="new-task-img" alt="New-Task" />New Task
+                      <Image src={task} className="new-task-img" alt="New-Task" />New Task
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Chat />
+        <Chat className="bg-white border-gray" />
       </div>
     </>
   );

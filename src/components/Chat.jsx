@@ -1,5 +1,7 @@
 import React from 'react';
+import 'tailwindcss/tailwind.css';
 import search from "../app/images/icons/search-icon.svg";
+import Image from 'next/image';
 import plus from "../app/images/icons/circle-plus-icon.svg";
 import profilenisa from "../app/images/photo-profile/profile-nisa.png";
 
@@ -9,15 +11,15 @@ const Chat = () => {
     <aside id="chat-container" className="m-0">
       <div className="flex justify-between items-center">
         <h3 className="mb-0">Message</h3>
-        <img src={plus} alt="" />
+        <Image src={plus} alt="" />
       </div>
       <div className="search-box p-2 r-20px">
-        <img src={search} alt="search icon" />
+        <Image src={search} alt="search icon" />
         <input type="text" placeholder="Search" />
       </div>
       <div className="message-list">
         <div className="message">
-          <img src={profilenisa} alt="Nisa Sabyan" />
+          <Image src={profilenisa} alt="Nisa Sabyan" />
           <div className="flex justify-between flex-grow-1">
             <div>
               <div className="sender-name"><span>Nisa Sabyan</span></div>
@@ -28,7 +30,7 @@ const Chat = () => {
         </div>
 
         <div className="message">
-          <img src={profilenisa} alt="Nisa Sabyan" />
+          <Image src={profilenisa} alt="Nisa Sabyan" />
           <div className="flex justify-between flex-grow-1">
             <div>
               <div className="sender-name"><span>Discussion Group 21 (5)</span></div>
@@ -39,7 +41,7 @@ const Chat = () => {
         </div>
 
         <div className="message">
-          <img src={profilenisa} alt="Nisa Sabyan" />
+          <Image src={profilenisa} alt="Nisa Sabyan" />
           <div className="flex justify-between flex-grow-1">
             <div>
               <div className="sender-name"><span>Rio Dewanto</span></div>
@@ -50,7 +52,7 @@ const Chat = () => {
         </div>
 
         <div className="message">
-          <img src={profilenisa} alt="Nisa Sabyan" />
+          <Image src={profilenisa} alt="Nisa Sabyan" />
           <div className="flex justify-between flex-grow-1">
             <div>
               <div className="sender-name"><span>Nisa Sabyan</span></div>
@@ -61,7 +63,7 @@ const Chat = () => {
         </div>
 
         <div className="message">
-          <img src={profilenisa} alt="Nisa Sabyan" />
+          <Image src={profilenisa} alt="Nisa Sabyan" />
           <div className="flex justify-between flex-grow-1">
             <div>
               <div className="sender-name"><span>Nisa Sabyan</span></div>
@@ -72,7 +74,7 @@ const Chat = () => {
         </div>
 
         <div className="message">
-          <img src={profilenisa} alt="Uus" />
+          <Image src={profilenisa} alt="Uus" />
           <div className="flex justify-between flex-grow-1">
             <div>
               <div className="sender-name"><span>Uus</span></div>

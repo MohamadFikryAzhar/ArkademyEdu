@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
+import 'tailwindcss/tailwind.css';
 // import Notifications from "./Notification";
 import picture from "../app/images/photo-profile/profile-picture.png";
 import dashboard from "../app/images/icons/dashboard-icon.svg";
@@ -22,7 +24,7 @@ const Sidebar = () => {
       </div>
 
       <Link href="./Profile" className="avatar-container cursor-pointer text-link">
-        <img
+        <Image
           src={picture}
           className="avatar-image"
           alt=""
@@ -33,26 +35,26 @@ const Sidebar = () => {
 
       <div className="menu-container">
         <Link href="./Dashboard" className="side-link cursor-pointer text-link">
-          <img src={dashboard} alt="" />
+          <Image src={dashboard} alt="" />
           Dashboard
         </Link>
         <Link href="./Activity" className="side-link cursor-pointer text-link">
-          <img src={activity} alt="" />
+          <Image src={activity} alt="" />
           Activity
         </Link>
         <Link href="./Settings" className="side-link cursor-pointer text-link">
-          <img src={settings} alt="" />
+          <Image src={settings} alt="" />
           Settings
         </Link>
         <Link href="./Help" className="side-link cursor-pointer text-link">
-          <img src={help} alt="help" />
+          <Image src={help} alt="help" />
           Help
         </Link>
         <div
         //   onClick={logoutClear}
           className="side-link cursor-pointer text-link"
         >
-          <img
+          <Image
             src={logout}
             className="menu-icon text-danger"
             alt="Logout Icon"

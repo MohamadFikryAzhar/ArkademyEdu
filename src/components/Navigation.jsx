@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import 'tailwindcss/tailwind.css';
 import profile from "../app/images/icons/profile-icon.png";
 import dashboard from "../app/images/icons/dashboard-icon-black.png";
 import activity from "../app/images/icons/activity-icon-black.png";
@@ -14,7 +16,7 @@ const Navigation = () => {
           <Link href="/Profile" className="item r-10px cursor-pointer text-link">
               <span>
                 {' '}
-                <img
+                <Image
                   className="icon-mobile"
                   src={profile}
                   alt="profile"
@@ -24,7 +26,7 @@ const Navigation = () => {
           <Link href="/Dashboard" className="item r-10px cursor-pointer text-link">
               <span>
                 {' '}
-                <img
+                <Image
                   className="icon-mobile"
                   src={dashboard}
                   alt="dashboard"
@@ -34,7 +36,7 @@ const Navigation = () => {
           <Link href="/Activity" className="item r-10px cursor-pointer">
               <span>
                 {' '}
-                <img
+                <Image
                   className="icon-mobile"
                   src={activity}
                   alt="activity"
@@ -44,7 +46,7 @@ const Navigation = () => {
           <div className="item r-10px cursor-pointer">
             <span>
               {' '}
-              <img
+              <Image
                 className="icon-mobile style-width"
                 src={chat}
                 alt=""
@@ -53,7 +55,7 @@ const Navigation = () => {
           </div>
           <Link href="/" /* onClick={logoutClear} */ className="item r-10px cursor-pointer">
               <span>
-                <img
+                <Image
                   className="icon-mobile"
                   src={logout}
                   alt="logout"
