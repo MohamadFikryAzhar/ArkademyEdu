@@ -1,8 +1,8 @@
 import Link from "next/link";
 import 'tailwindcss/tailwind.css';
-import Image from "next/image";
-import reveal from "../../app/images/icons/reveal-icon.svg"
-import google from "../../app/images/icons/google-icon.svg"
+// import Image from "next/image";
+// import reveal from "../../app/images/icons/reveal-icon.svg"
+// import google from "../../app/images/icons/google-icon.svg"
 
 export default function LoginForm() {
     return (
@@ -23,12 +23,11 @@ export default function LoginForm() {
 
                     <Link href="/reset-password" className="block text-sm text-black-500 mt-2 mb-2 text-end hover:text-white">Forgot password?</Link>
 
-                    <div className="mb-4">
+                    <Link href="/user/dashboard" className="mb-4">
                         <button className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">Login</button>
-                    </div>
+                    </Link>
 
-                    <Link href="/fasilitator" className="w-full p-2 bg-gray-300 text-black rounded hover:bg-gray-500 flex items-center justify-center">
-                        <Image src={google} alt="google" className="w-6 h-6 mr-1"/> Login with Google
+                    <Link href="/fasilitator/dashboard" className="mt-4 w-full p-2 bg-gray-300 text-black rounded hover:bg-gray-500 flex items-center justify-center">Login as Fasilitator
                     </Link>
 
                     <div className="text-center mt-4">

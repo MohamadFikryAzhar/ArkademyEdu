@@ -1,8 +1,8 @@
 import Link from "next/link";
 import 'tailwindcss/tailwind.css';
-import Image from "next/image";
+// import Image from "next/image";
 // import reveal from "../../app/images/icons/reveal-icon.svg"
-import google from "../../app/images/icons/google-icon.svg"
+// import google from "../../app/images/icons/google-icon.svg"
 
 export default function RegisterForm() {
     return (
@@ -35,8 +35,8 @@ export default function RegisterForm() {
                         <button className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">Register</button>
                     </div>
 
-                    <Link href="/fasilitator" className="w-full p-2 bg-gray-300 text-black rounded hover:bg-gray-500 flex items-center justify-center">
-                        <Image src={google} alt="google" className="w-6 h-6 mr-1"/> Register with Google
+                    <Link href="../../auth/login" className="w-full p-2 bg-gray-300 text-black rounded hover:bg-gray-500 flex items-center justify-center">
+                        Register as Fasilitator
                     </Link>
 
                     <div className="text-center mt-4">
