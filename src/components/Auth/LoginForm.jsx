@@ -1,41 +1,114 @@
-import Link from "next/link";
-import 'tailwindcss/tailwind.css';
-// import Image from "next/image";
-// import reveal from "../../app/images/icons/reveal-icon.svg"
-// import google from "../../app/images/icons/google-icon.svg"
+'use client'
+import React, { Component } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import axios from 'axios';
+import jwt from 'jsonwebtoken';
+import Modal from './Modal';
 
-export default function LoginForm() {
-    return (
-        <div className="container mx-auto p-4">
-            <div className="lg:w-full md:w-full sm:w-1/2">
-                <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
-                <form>
-                    <div className="mb-4">
-                        <label htmlFor="userName" className="block text-sm font-semibold text-gray-600">Username or Email</label>
-                        <input type="text" className="w-full mt-1 p-2 border rounded bg-white" name="userNameOrEmail" required />
+class LoginForm extends Component {
+    state = {
+        userNameOrEmail: '',
+        password: '',
+        error: null,
+        success: null,
+    };
+
+    handleChange = (e) => {
+        const { name, value } = e.target;
+        this.setState({
+            [name]: value,
+        });
+    };
+
+    handleCloseModal = () => {
+        this.setState({ error: null, success: null });
+    };
+
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        const { userNameOrEmail, password } = this.state;
+        const body = {
+            userNameOrEmail,
+            password,
+        };
+
+        this.setState({ error: null, success: null });
+
+        try {
+            const result = await axios.post('http://localhost:4000/users/api/auth/login', body);
+
+            console.log(result.data.success);
+            const token = result.data.data.result.token; // Update the access token
+            console.log(token);
+            const decoded = jwt.decode(token);
+            console.log(decoded);
+
+            this.setState({ success: 'Login Successful' });
+
+            this.setState({
+                userNameOrEmail: '',
+                password: '',
+            });
+
+            localStorage.setItem('token', `Bearer ${token}`);
+
+            if (result.data.success) {
+                decoded.role_id === 1
+                    ? window.location.replace('/user/dashboard')
+                    : window.location.replace('/fasilitator/dashboard');
+            }
+        } catch (err) {
+            this.setState({ error: 'Login Failed' });
+            console.error(err);
+        }
+    };
+    render() {
+        return (
+            <>
+                <Head>
+                    <title>Login</title>
+                </Head>
+                <div className="container mx-auto p-4" >
+                    <div className="lg:w-full md:w-full sm:w-1/2">
+                        <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="mb-4">
+                                <label htmlFor="userName" className="block text-sm font-semibold text-gray-600">Username or Email</label>
+                                <input type="text" className="w-full mt-1 p-2 border rounded bg-white" name="userNameOrEmail" onChange={this.handleChange} required />
+                            </div>
+                            <div className="mb-4">
+                                <div className="relative">
+                                    <label htmlFor="password" className="block text-sm font-semibold text-gray-600">Password</label>
+                                    <input type="password" className="w-full mt-1 p-2 border rounded" name="password" onChange={this.handleChange} required />
+                                </div>
+                            </div>
+
+                            <Link href="/reset-password" className="block text-sm text-black-500 mt-2 mb-2 text-end hover:text-white">Forgot password?</Link>
+
+                            <button className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">Login</button>
+                            {/* <Link href="/user/dashboard" className="mb-4"></Link> */}
+
+                            <Link href="/fasilitator/dashboard" className="mt-4 w-full p-2 bg-gray-300 text-black rounded hover:bg-gray-500 flex items-center justify-center">Login as Fasilitator
+                            </Link>
+
+                            <div className="text-center mt-4">
+                                <span className="text-sm text-gray-600">New user? </span>
+                                <Link href="../../auth/register" className="text-blue-500">Register</Link>
+                            </div>
+                        </form>
+                        {this.state.success && (
+                            <Modal message={this.state.success} onClose={this.handleCloseModal} />
+                        )}
+
+                        {this.state.error && (
+                            <Modal message={this.state.error} onClose={this.handleCloseModal} />
+                        )}
                     </div>
-                    <div className="mb-4">
-                        <div className="relative">
-                            <label htmlFor="password" className="block text-sm font-semibold text-gray-600">Password</label>
-                            <input type="password" className="w-full mt-1 p-2 border rounded" name="password" required />
-                        </div>
-                    </div>
-
-                    <Link href="/reset-password" className="block text-sm text-black-500 mt-2 mb-2 text-end hover:text-white">Forgot password?</Link>
-
-                    <Link href="/user/dashboard" className="mb-4">
-                        <button className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">Login</button>
-                    </Link>
-
-                    <Link href="/fasilitator/dashboard" className="mt-4 w-full p-2 bg-gray-300 text-black rounded hover:bg-gray-500 flex items-center justify-center">Login as Fasilitator
-                    </Link>
-
-                    <div className="text-center mt-4">
-                        <span className="text-sm text-gray-600">New user? </span>
-                        <Link href="../../auth/register" className="text-blue-500">Register</Link>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
+                </div>
+            </>
+        );
+    }
 }
+
+export default LoginForm
