@@ -33,7 +33,7 @@ function Notifications() {
         style={customStyles}
       >
         <span>
-          <img
+          <Image
             onClick={() => setModalIsOpen(false)}
             className="cursor-pointer"
             align="right"
@@ -48,7 +48,7 @@ function Notifications() {
           <span className="text-color-3">Today</span>
           <div className="flex flex-row mt-4 items-center justify-between">
             <span className="text-content mx-4">
-              <img alt="notif" src={notif} />
+              <Image alt="notif" src={notif} />
             </span>
             <span className="text-color-3 mx-4">
               There are 10 news updates for today. Don’t miss it!
@@ -57,7 +57,7 @@ function Notifications() {
           </div>
         </div>
       </Modal>
-      <img
+      <Image
         onClick={() => setModalIsOpen(true)}
         className="cursor-pointer"
         align="right"

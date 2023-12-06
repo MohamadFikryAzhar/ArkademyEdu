@@ -34,18 +34,18 @@ function Member() {
                 <div id="main-content" className="bg-transparent p-3 flex flex-col justify-start">
                     <h1 className="flex items-center">
                         <Link to="./Activity">
-                            <img className="rotate-180" src="../images/icons/forward-icon.svg" alt="prev page" />
+                            <Image className="rotate-180" src="../images/icons/forward-icon.svg" alt="prev page" />
                         </Link>
                         Fundamental
                     </h1>
                     <div className="card bg-white border-0 p-0 rounded-10">
                         <div className="class-detail-cover-container">
-                            <img src="../images/img/class-detail-cover.png" className="class-cover-image rounded-top-10"
+                            <Image src="../images/img/class-detail-cover.png" className="class-cover-image rounded-top-10"
                                 alt="Cover" />
 
                             <div className="cover-description">
                                 <div className="category-icon-container rounded-10">
-                                    <img src="../images/icons/software-category-icon.svg" alt="software category" />
+                                    <Image src="../images/icons/software-category-icon.svg" alt="software category" />
                                 </div>
                                 <div className="cover-description-content flex justify-between items-center">
                                     <div>
@@ -83,11 +83,11 @@ function Member() {
                                         onRequestClose={() => setModalIsOpen(false)}
                                         style={customStyles}>
                                         <div className="flex items-center justify-between flex-grow-1"> */}
-                                            <img src="../images/photo-profile/profile-deddy.png" alt="Deddy Corbuzier" />
+                                            <Image src="../images/photo-profile/profile-deddy.png" alt="Deddy Corbuzier" />
                                             <div>
                                                 <div><span className="member-name">Deddy Corbuzier</span></div>
                                             </div>
-                                            <div onClick={() => setModalIsOpen(false)} className="cursor-pointer"><img className="black" src="../images/icons/modal-close.png" alt="close" /></div>
+                                            <div onClick={() => setModalIsOpen(false)} className="cursor-pointer"><Image className="black" src="../images/icons/modal-close.png" alt="close" /></div>
                                         </div>
                                         <div className="modal-content flex-row mt-4 items-center justify-between">
                                             <span className="text-content mx-4">HTML Essential Training</span>
@@ -124,11 +124,11 @@ function Member() {
                                     {/* </Modal> */}
                                     <div onClick={() => setModalIsOpen(true)} className="cursor-pointer member">
                                         <div className="flex items-center justify-between flex-grow-1">
-                                            <img src="../images/photo-profile/profile-deddy.png" alt="Deddy Corbuzier" />
+                                            <Image src="../images/photo-profile/profile-deddy.png" alt="Deddy Corbuzier" />
                                             <div>
                                                 <div><span className="member-name">Deddy Corbuzier</span></div>
                                             </div>
-                                            <div><img className="black" src="../images/icons/List.png" alt="list-black" /></div>
+                                            <div><Image className="black" src="../images/icons/List.png" alt="list-black" /></div>
                                         </div>
                                     </div>
                                 </div>
