@@ -1,5 +1,6 @@
 import React from 'react';
-import Modal from 'react-modal';
+import Image from 'next/image';
+// import Modal from 'react-modal';
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css';
 import '../../../public/circle.css';

@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import close from "../app/images/icons/close-notification-icon.png";
 import notif from "../app/images/icons/notif-icon-1.png";
 import black from "../app/images/icons/notification-icon-black.svg";
+import Image from 'next/image';
 
 // const customStyles = {
 //   content: {
