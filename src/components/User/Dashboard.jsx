@@ -35,7 +35,7 @@ function DashboardUser(props) {
             <div className="dashboard-container">
                 {/* <Sidebar/> */}
                 <div id="dashboard-peserta">
-                    <div className="news-card r-10px mb-10">
+                    <div className="news-card r-10px mb-5 sm:mb-10 justify-center items-center mr-1 mt-2">
                         <h5 className="news-title text-2xl font-montserrat font-bold py-6 px-4">News</h5>
                         <div className="news-image-container relative h-72 overflow-hidden r-10px">
                             <Image
@@ -46,7 +46,7 @@ function DashboardUser(props) {
                             <div className="carousel-indicators"></div>
                         </div>
                     </div>
-                    <div className="news-card r-10px mt-3">
+                    <div className="news-card r-10px sm:mt-3 mr-1">
                         <div className="flex justify-between">
                             <h5 className="news-title px-5">Today, October 16</h5>
                             <Image src={calendar} alt="" className="px-4" />

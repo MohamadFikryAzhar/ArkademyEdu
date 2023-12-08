@@ -36,7 +36,7 @@ function UserActivity(props) {
                 <div id="main-content" className="bg-transparent p-3 d-flex flex-column justify-content-start">
                     <h1 className="text-2xl font-montserrat font-bold">Activity</h1>
                     <div className="card bg-transparent border-0 p-0">
-                        <div className="card-header bg-transparent border-0 text-2xm font-montserrat font-bold py-6 px-4">
+                        <div className="card-header bg-transparent border-0 text-2xm font-montserrat font-bold sm:py-6 sm:px-4">
                             My Class
                         </div>
                         <div className="card-body p-0">
@@ -45,11 +45,11 @@ function UserActivity(props) {
                                     <thead className="bg-transparent">
                                         <tr className="bg-transparent">
                                             <th scope="col" className="text-center"><input type="checkbox" name="" id="" /></th>
-                                            <th scope="col">Class Name</th>
-                                            <th scope="col">Category</th>
-                                            <th scope="col">Description</th>
+                                            <th scope="col" className="pr-10 sm:pr-5">Class Name</th>
+                                            <th scope="col" className="hidden sm:table">Category</th>
+                                            <th scope="col" className="hidden sm:table">Description</th>
                                             <th scope="col">Progress</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col" className="hidden sm:table">Status</th>
                                             <th scope="col">Score</th>
                                             <th scope="col"></th>
                                         </tr>
@@ -59,8 +59,8 @@ function UserActivity(props) {
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="" id="" /></th>
                                             <td className="pr-5 text-center">Fundamental</td>
-                                            <td className="pr-5">Programming</td>
-                                            <td className="text-table pr-5">This is Fundamental</td>
+                                            <td className="pr-5 hidden sm:table">Programming</td>
+                                            <td className="text-table pr-5 hidden sm:table">This is Fundamental</td>
                                             <td>
                                                 <div className="c100 p89 small pr-5">
                                                     <span>89%</span>
@@ -70,15 +70,15 @@ function UserActivity(props) {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><span className="badge badge-ongoing p-2 r-15px pr-5">Ongoing</span></td>
+                                            <td><span className="badge badge-ongoing p-2 r-15px pr-5 hidden sm:table">Ongoing</span></td>
                                             <td><span className="good-score"> 89</span></td>
                                             <td><Image src={list} alt="list" /></td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="" id="" /></th>
                                             <td className="pr-5 text-center">React Native</td>
-                                            <td className="pr-5">Software</td>
-                                            <td className="text-table pr-5">How to make a React Native Project</td>
+                                            <td className="pr-5 hidden sm:table">Software</td>
+                                            <td className="text-table pr-5 hidden sm:table">How to make a React Native Project</td>
                                             <td>
                                                 <div className="c100 p21 small pr-5">
                                                     <span>21%</span>
@@ -88,15 +88,15 @@ function UserActivity(props) {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><span className="badge badge-complete p-2 r-15px">Completed</span></td>
+                                            <td><span className="badge badge-complete p-2 r-15px hidden sm:table">Completed</span></td>
                                             <td><span className="veryLow-score"> 21</span></td>
                                             <td><Image src={list} alt="list" /></td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="" id="" /></th>
                                             <td className="pr-5 text-center">Fundamental</td>
-                                            <td className="pr-5">Programming</td>
-                                            <td className="text-table pr-5">This is Fundamental</td>
+                                            <td className="pr-5 hidden sm:table">Programming</td>
+                                            <td className="text-table pr-5 hidden sm:table">This is Fundamental</td>
                                             <td>
                                                 <div className="c100 p54 small pr-5">
                                                     <span>69%</span>
@@ -106,15 +106,15 @@ function UserActivity(props) {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><span className="badge badge-ongoing p-2 r-15px pr-5">Ongoing</span></td>
+                                            <td><span className="badge badge-ongoing p-2 r-15px pr-5 hidden sm:table">Ongoing</span></td>
                                             <td><span className="medium-score"> 69</span></td>
                                             <td><Image src={list} alt="list" /></td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="" id="" /></th>
                                             <td className="pr-5 text-center">Fundamental</td>
-                                            <td className="pr-5">Programming</td>
-                                            <td className="text-table pr-5">This is Fundamental</td>
+                                            <td className="pr-5 hidden sm:table">Programming</td>
+                                            <td className="text-table pr-5 hidden sm:table">This is Fundamental</td>
                                             <td>
                                                 <div className="c100 p89 small pr-5">
                                                     <span>89%</span>
@@ -124,7 +124,7 @@ function UserActivity(props) {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><span className="badge badge-ongoing p-2 r-15px pr-5">Ongoing</span></td>
+                                            <td><span className="badge badge-ongoing p-2 r-15px pr-5 hidden sm:table">Ongoing</span></td>
                                             <td><span className="good-score"> 89</span></td>
                                             <td><Image src={list} alt="list" /></td>
                                         </tr>
@@ -142,7 +142,7 @@ function UserActivity(props) {
                         <div className="card-header bg-transparent border-0 text-2xm font-montserrat font-bold py-6 px-4">
                             New Class
                         </div>
-                        <div className="card-body p-4">
+                        <div className="card-body p-2">
                             <div className="input-group relative flex flex-row">
                                 <Image src={search} alt="search icon" className="absolute top-1/2 transform -translate-y-1/2 left-2" />
                                 <input type="text" className="form-control col-12 pl-8 py-2 pr-4 rounded-l border border-gray-300 w-full" placeholder="Quick Search"
@@ -161,55 +161,55 @@ function UserActivity(props) {
                                 </select>
                             </div>
                             <div className="table-responsive">
-                                <table className="table table-borderless new-class-table p-2 table-style w-full">
+                                <table className="table table-borderless new-class-table table-style w-full pb-4">
                                     <thead>
                                         <tr>
                                             <th scope="col">Class Name</th>
-                                            <th scope="col">Category</th>
-                                            <th scope="col">Description</th>
+                                            <th scope="col" className="hidden sm:table">Category</th>
+                                            <th scope="col" className="hidden sm:table">Description</th>
                                             <th scope="col">Level</th>
                                             <th scope="col">Pricing</th>
                                             <th scope="col"></th>
-                                            <th scope="col"></th>
+                                            <th scope="col" className="hidden sm:table"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {/* Your table rows go here */}
-                                        <tr className="w-full gap-5">
+                                        <tr className="w-full sm:gap-5">
                                             <td className="text-center">Fundamental</td>
-                                            <td className="">Programming</td>
-                                            <td className="text-table">This is Fundamental</td>
+                                            <td className="hidden sm:table">Programming</td>
+                                            <td className="text-table hidden sm:table">This is Fundamental</td>
                                             <td className="">Beginner</td>
                                             <td><span className="text-gray-400"> Free</span></td>
                                             <td><span className="badge badge-complete p-2 r-15px">Register</span></td>
-                                            <td><Image src={list} alt="list" /></td>
+                                            <td><Image src={list} alt="list" className="hidden sm:table"/></td>
                                         </tr>
                                         <tr className="w-full">
                                             <td className="text-center">Fundamental</td>
-                                            <td className="">Programming</td>
-                                            <td className="text-table">This is Fundamental</td>
+                                            <td className="hidden sm:table">Programming</td>
+                                            <td className="text-table hidden sm:table">This is Fundamental</td>
                                             <td className="">Beginner</td>
                                             <td><span className="text-gray-400"> Free</span></td>
                                             <td><span className="badge badge-complete p-2 r-15px">Register</span></td>
-                                            <td><Image src={list} alt="list" /></td>
+                                            <td><Image src={list} alt="list" className="hidden sm:table"/></td>
                                         </tr>
                                         <tr className="w-full">
                                             <td className="text-center">Fundamental</td>
-                                            <td className="">Programming</td>
-                                            <td className="text-table">This is Fundamental</td>
+                                            <td className="hidden sm:table">Programming</td>
+                                            <td className="text-table hidden sm:table">This is Fundamental</td>
                                             <td className="">Beginner</td>
                                             <td><span className="text-gray-400"> Free</span></td>
                                             <td><span className="badge badge-complete p-2 r-15px">Register</span></td>
-                                            <td><Image src={list} alt="list" /></td>
+                                            <td><Image src={list} alt="list" className="hidden sm:table"/></td>
                                         </tr>
                                         <tr className="w-full">
                                             <td className="text-center">Fundamental</td>
-                                            <td className="pr-5">Programming</td>
-                                            <td className="text-table">This is Fundamental</td>
+                                            <td className="pr-5 hidden sm:table">Programming</td>
+                                            <td className="text-table hidden sm:table">This is Fundamental</td>
                                             <td className="pr-5">Beginner</td>
                                             <td><span className="text-gray-400"> $120</span></td>
                                             <td><span className="badge badge-complete p-2 r-15px">Register</span></td>
-                                            <td><Image src={list} alt="list" /></td>
+                                            <td><Image src={list} alt="list" className="hidden sm:table"/></td>
                                         </tr>
                                     </tbody>
                                     {/* <tbody>
@@ -235,7 +235,7 @@ function UserActivity(props) {
                                     </tbody> */}
                                 </table>
                             </div>
-                            <div className="col-12 pagination-container flex flex-row justify-content-between align-items-center">
+                            <div className="col-12 pagination-container flex flex-row justify-content-between align-items-center pb-2 sm:pb-0">
                                 {/* {getAllCoursesReducer.isFulfilled ? <span className="w-100">Showing 10 out of {getAllCoursesReducer.info.count} </span> : <span className="w-100">Showing 0 </span>} */}
                                 <div className="flex flex-row justify-content-evenly">
                                     <div className="table-page "><Image className="rotate-180" src={forward} alt="next" />

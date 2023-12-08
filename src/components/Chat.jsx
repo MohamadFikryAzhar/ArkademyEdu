@@ -13,7 +13,7 @@ import profilereza from "../app/images/photo-profile/profile-reza.png"
 
 const Chat = () => {
   return (
-    <aside id="chat-container" className="m-0 bg-white border rounded-lg p-4">
+    <aside id="chat-container" className="m-0 bg-white border rounded-lg p-4 hidden sm:block">
       <div className="flex justify-between items-center">
         <h3 className="mb-0">Message</h3>
         <Image src={plus} alt="" />

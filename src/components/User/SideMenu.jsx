@@ -19,7 +19,7 @@ import profile from "../../app/images/photo-profile/profile-peppy.png"
 
 const SideMenu = () => {
     return (
-        <aside className="bg-blue-400 border rounded-lg p-10">
+        <aside className="bg-blue-400 border rounded-lg p-10 lg:w-1/5">
             {/* Assuming Notifications is the correct component */}
             <div className="notification">
                 {/* <Notifications /> */}
