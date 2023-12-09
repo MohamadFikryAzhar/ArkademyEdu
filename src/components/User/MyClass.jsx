@@ -31,9 +31,9 @@ function MyClass(props) {
                 {/* <SideMenu /> */}
                 <div
                     id="main-content"
-                    className="bg-transparent p-3 d-flex flex-column justify-content-start"
+                    className="bg-transparent p-3 d-flex flex-column justify-start"
                 >
-                    <h1 className="card-header bg-transparent border-0 text-2xm font-montserrat font-bold flex flex-row items-center">
+                    <h1 className="card-header bg-transparent border-0 text-2xm font-montserrat font-bold flex flex-row items-center hidden sm:block">
                         <Link href="./activity">
                             <Image
                                 className="rotate-180"
@@ -43,8 +43,8 @@ function MyClass(props) {
                         </Link>
                         My Class
                     </h1>
-                    <div className="card border-0 p-0">
-                        <div className="card-header bg-transparent flex flex-start gap-10 w-full items-center">
+                    <div className="card border-0 p-0 hidden sm:block">
+                        <div className="card-header bg-transparent flex flex-start sm:gap-10 w-full items-center">
                             <div className="flex flex-row justify-content-between row w-full">
                                 {/* <div className="d-flex flex-row justify-content-between col-10 col-md-8" /> */}
                                 {/* <Image src={search} alt="search icon" className="absolute top-1/2 transform -translate-y-1/2 left-2" /> */}
@@ -69,7 +69,7 @@ function MyClass(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="card-body p-0 mt-4">
+                    <div className="card-body p-0 sm:mt-4">
                         <div className="table-responsive w-full">
                             <table className="table my-class-table table-responsive w-full">
                                 <thead className="bg-transparent">
@@ -78,10 +78,10 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <th scope="col">Class Name</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Description</th>
+                                        <th scope="col" className="hidden sm:table-cell">Category</th>
+                                        <th scope="col" className="hidden sm:table-cell">Description</th>
                                         <th scope="col">Progress</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col" className="hidden sm:table-cell">Status</th>
                                         <th scope="col">Score</th>
                                         <th scope="col"></th>
                                     </tr>
@@ -98,8 +98,8 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <td>Fundamental</td>
-                                        <td>Programming</td>
-                                        <td className="text-table">Fundamental of Programming</td>
+                                        <td className="hidden sm:table-cell">Programming</td>
+                                        <td className="text-table hidden sm:table-cell">Fundamental of Programming</td>
                                         <td>
                                             <div className="c100 p80 small">
                                                 <span>89%</span>
@@ -110,7 +110,7 @@ function MyClass(props) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="badge badge-ongoing p-2 r-15px">
+                                            <span className="badge badge-ongoing p-2 r-15px hidden sm:table-cell">
                                                 Ongoing
                                             </span>
                                         </td>
@@ -129,8 +129,8 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <td>Fundamental</td>
-                                        <td>Programming</td>
-                                        <td className="text-table">Fundamental of Programming</td>
+                                        <td className="hidden sm:table-cell">Programming</td>
+                                        <td className="text-table hidden sm:table-cell">Fundamental of Programming</td>
                                         <td>
                                             <div className="c100 p80 small">
                                                 <span>89%</span>
@@ -141,7 +141,7 @@ function MyClass(props) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="badge badge-ongoing p-2 r-15px">
+                                            <span className="badge badge-ongoing p-2 r-15px hidden sm:table-cell">
                                                 Ongoing
                                             </span>
                                         </td>
@@ -160,8 +160,8 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <td>Fundamental</td>
-                                        <td>Programming</td>
-                                        <td className="text-table">Fundamental of Programming</td>
+                                        <td className="hidden sm:table-cell">Programming</td>
+                                        <td className="text-table hidden sm:table-cell">Fundamental of Programming</td>
                                         <td>
                                             <div className="c100 p80 small">
                                                 <span>89%</span>
@@ -172,7 +172,7 @@ function MyClass(props) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="badge badge-ongoing p-2 r-15px">
+                                            <span className="badge badge-ongoing p-2 r-15px hidden sm:table-cell">
                                                 Ongoing
                                             </span>
                                         </td>
@@ -191,8 +191,8 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <td>Fundamental</td>
-                                        <td>Programming</td>
-                                        <td className="text-table">Fundamental of Programming</td>
+                                        <td className="hidden sm:table-cell">Programming</td>
+                                        <td className="text-table hidden sm:table-cell">Fundamental of Programming</td>
                                         <td>
                                             <div className="c100 p80 small">
                                                 <span>89%</span>
@@ -203,7 +203,7 @@ function MyClass(props) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="badge badge-ongoing p-2 r-15px">
+                                            <span className="badge badge-ongoing p-2 r-15px hidden sm:table-cell">
                                                 Ongoing
                                             </span>
                                         </td>
@@ -222,8 +222,8 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <td>Fundamental</td>
-                                        <td>Programming</td>
-                                        <td className="text-table">Fundamental of Programming</td>
+                                        <td className="hidden sm:table-cell">Programming</td>
+                                        <td className="text-table hidden sm:table-cell">Fundamental of Programming</td>
                                         <td>
                                             <div className="c100 p80 small">
                                                 <span>89%</span>
@@ -234,7 +234,7 @@ function MyClass(props) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="badge badge-ongoing p-2 r-15px">
+                                            <span className="badge badge-ongoing p-2 r-15px hidden sm:table-cell">
                                                 Ongoing
                                             </span>
                                         </td>
@@ -253,8 +253,8 @@ function MyClass(props) {
                                             <input type="checkbox" name="" id="" />
                                         </th>
                                         <td>Fundamental</td>
-                                        <td>Programming</td>
-                                        <td className="text-table">Fundamental of Programming</td>
+                                        <td className="hidden sm:table-cell">Programming</td>
+                                        <td className="text-table hidden sm:table-cell">Fundamental of Programming</td>
                                         <td>
                                             <div className="c100 p80 small">
                                                 <span>89%</span>
@@ -265,7 +265,7 @@ function MyClass(props) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="badge badge-ongoing p-2 r-15px">
+                                            <span className="badge badge-ongoing p-2 r-15px hidden sm:table-cell">
                                                 Ongoing
                                             </span>
                                         </td>

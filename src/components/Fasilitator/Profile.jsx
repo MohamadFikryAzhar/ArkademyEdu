@@ -8,7 +8,7 @@ import '../../../public/style.css';
 import forward from "../../app/images/icons/forward-icon.svg";
 // import search from "../../app/images/icons/search-icon.svg";
 import cover from "../../app/images/img/profile-background.png";
-import profile from "../../app/images/photo-profile/profile-peppy.png";
+// import profile from "../../app/images/photo-profile/profile-peppy.png";
 import edit from "../../app/images/icons/edit-icon.svg";
 import phone from "../../app/images/icons/phone-icon.svg";
 import stars from "../../app/images/icons/triple-star-icon.svg";
@@ -31,7 +31,7 @@ function Profile(props) {
                             <Image src={cover} alt="Profile Background" className="image-cover" />
                             <div className="avatar-lg">
                                 <div className="flex">
-                                    <Image src={profile} className="avatar-image-lg" alt="Avatar" />
+                                    <Image src={profilepict} className="avatar-image-lg" alt="Avatar" />
                                     <Image src={edit} className="edit-avatar" alt="Edit Icon" />
                                 </div>
                                 <span>Emir Kharisma</span>

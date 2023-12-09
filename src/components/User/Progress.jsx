@@ -40,7 +40,7 @@ function ClassProgress(props) {
                             <Image src={cover} className="class-cover-image rounded-xl"
                                 alt="Cover" />
                             <div className="cover-description">
-                                <div className="category-icon-container rounded-xl">
+                                <div className="category-icon-container rounded-xl w-20 h-20 sm:w-auto sm:h-auto">
                                     <Image src={software}alt="software category" />
                                 </div>
                                 <div className="cover-description-content flex-grow-1">
@@ -54,7 +54,7 @@ function ClassProgress(props) {
                                         <div className="horizontal-progress-container flex-grow-1">
                                             <span>80% to complete</span>
                                             <div className="horizontal-background w-full">
-                                                <span className="horizontal-progress w-80"></span>
+                                                <span className="horizontal-progress w-20 sm:w-80"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@ function ClassProgress(props) {
                                     <Link href="./progress" className="tab-menu active cursor-pointer text-link">
                                         Class Progress
                                     </Link>
-                                    <div className="tab-menu">Class Discussion</div>
+                                    <div className="tab-menu hidden sm:block">Class Discussion</div>
                                 </div>
                                 <div className="description">
                                     <div className="table-responsive mt-0 w-full">

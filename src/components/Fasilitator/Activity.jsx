@@ -93,9 +93,9 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                             <tr>
                                                 <th scope="col" className="text-center"><input type="checkbox" name="" id="" /></th>
                                                 <th scope="col">Class Name</th>
-                                                <th scope="col">Category</th>
-                                                <th scope="col">Description</th>
-                                                <th scope="col">Schedule</th>
+                                                <th scope="col" className="hidden sm:table-cell">Category</th>
+                                                <th scope="col" className="hidden sm:table-cell">Description</th>
+                                                <th scope="col" className="hidden sm:table-cell">Schedule</th>
                                                 <th scope="col">Student</th>
                                                 <th scope="col"></th>
                                             </tr>
@@ -103,10 +103,10 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                         <tbody>
                                             <tr>
                                                 <th scope=" row"><input type="checkbox" name="" id="" /></th>
-                                                <td height="50px"><Link href="../user/class/detail" className="text-link">Learn C# </Link></td>
-                                                <td>Software</td>
-                                                <td>Learn the fundamentals of C#</td>
-                                                <td>Friday, 08:00 - 09:40</td>
+                                                <td height="50px"><Link href="../fasilitator/class/detail" className="text-link">Learn C# </Link></td>
+                                                <td className="hidden sm:table-cell">Software</td>
+                                                <td className="hidden sm:table-cell">Learn the fundamentals of C#</td>
+                                                <td className="hidden sm:table-cell">Friday, 08:00 - 09:40</td>
                                                 <td align="center">1 <Image src={toga} alt="student icon" /></td>
                                                 <td><Image src={list} alt="list icon" />
                                                 </td>
@@ -115,9 +115,9 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                             <tr>
                                                 <th scope=" row"><input type="checkbox" name="" id="" /></th>
                                                 <td height="50px">Learn C</td>
-                                                <td>Software</td>
-                                                <td>Learn the newest C</td>
-                                                <td>Monday, 13:00 - 14:40</td>
+                                                <td className="hidden sm:table-cell">Software</td>
+                                                <td className="hidden sm:table-cell">Learn the newest C</td>
+                                                <td className="hidden sm:table-cell">Monday, 13:00 - 14:40</td>
                                                 <td align="center">0 <Image src={toga} alt="student icon" /></td>
                                                 <td><Image src={list} className="" alt="list icon" /></td>
                                             </tr>
@@ -125,9 +125,9 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                             <tr>
                                                 <th scope=" row"><input type="checkbox" name="" id="" /></th>
                                                 <td height="50px">Learn PHP</td>
-                                                <td>Software</td>
-                                                <td>Learn PHP</td>
-                                                <td>Monday, 15:00 - 16:40</td>
+                                                <td className="hidden sm:table-cell">Software</td>
+                                                <td className="hidden sm:table-cell">Learn PHP</td>
+                                                <td className="hidden sm:table-cell">Monday, 15:00 - 16:40</td>
                                                 <td align="center">0 <Image src={toga} alt="student icon" /></td>
                                                 <td><Image src={list} alt="list icon" />
                                                 </td>
@@ -201,7 +201,7 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                                     <div className={"form-row w-50 mx-2"}>
                                                         <input
                                                             type="text"
-                                                            className={"activity-input w-25"}
+                                                            className={"activity-input mr-2 w-10 sm:w-25"}
                                                             placeholder={"00:00"}
                                                             name="start_time"
                                                             // onChange={this.handleChange}
@@ -209,7 +209,7 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                                         />
                                                         <input
                                                             type="text"
-                                                            className={"activity-input w-25"}
+                                                            className={"activity-input w-10 sm:w-25"}
                                                             placeholder={"00:00"}
                                                             name="finish_time"
                                                             // onChange={this.handleChange}
@@ -221,7 +221,7 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                         </div>
                                         <span className="mx-3">Description:</span>
                                         <textarea
-                                            className={"activity-text-area mx-3 w-full border rounded-xl border-black bg-gray-200"}
+                                            className={"activity-text-area mx-3 w-auto sm:w-full border rounded-xl border-black bg-gray-200"}
                                             name="description"
                                             cols="30"
                                             rows="10"
@@ -229,7 +229,7 @@ function ActivityFasilitator(props) /*extends Component*/ {
                                             required
                                         ></textarea>
                                         <input type="file" /*onChange={this.handleChange}*/ name="image" />
-                                        <div className="button-create-class">
+                                        <div className="button-create-class justify-center items-center">
                                             <button type="submit" className={"btn btn-register my-1 create-class bg-green-400 border rounded-xl p-4"}>
                                                 <span className="text-color-3">Create </span>
                                             </button>

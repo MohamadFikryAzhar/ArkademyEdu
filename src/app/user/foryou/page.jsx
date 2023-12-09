@@ -5,7 +5,7 @@ import Chat from "@/components/Chat";
 
 const Reset = () => {
     return (
-        <main className="flex min-h-screen relative bg-blue-100 gap-15">
+        <main className="flex flex-col sm:flex-row min-h-screen relative bg-blue-100 gap-15 m-4">
             <SidebarUser />
             <ForUser />
             <Chat />

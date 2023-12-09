@@ -33,12 +33,12 @@ function ClassDetail() {
                                 alt="Cover"
                             />
                             <div className="cover-description">
-                                <div className="category-icon-container rounded-xl">
+                                <div className="category-icon-container rounded-xl w-20 h-20 sm:w-auto sm:h-auto">
                                     <Image src={software} alt="software category" />
                                 </div>
                                 <div className="cover-description-content">
                                     <div>
-                                        <h2 className="cover-title">Fundamental</h2>
+                                        <h2 className="cover-title text-2xl md:text-4xl lg:text-6xl">Fundamental</h2>
                                         <div className="cover-description-level">
                                             <span>Level: Beginner</span>
                                             <span>Category: Software</span>

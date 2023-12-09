@@ -33,12 +33,12 @@ function ClassDetail() {
                                 alt="Cover"
                             />
                             <div className="cover-description">
-                                <div className="category-icon-container rounded-xl">
+                                <div className="category-icon-container rounded-xl w-20 h-20 sm:w-auto sm:h-auto">
                                     <Image src={software} alt="software category" />
                                 </div>
-                                <div className="cover-description-content">
-                                    <div>
-                                        <h2 className="cover-title">Fundamental</h2>
+                                <div className="cover-description-content hidden">
+                                    <div className=''>
+                                        <h2 className="cover-title text-2xl md:text-4xl lg:text-6xl">Fundamental</h2>
                                         <div className="cover-description-level">
                                             <span>Level: Beginner</span>
                                             <span>Category: Software</span>
@@ -46,7 +46,7 @@ function ClassDetail() {
                                         </div>
                                     </div>
                                     <div>
-                                        <button className="btn btn-success rounded-r-2xl px-3 py-2 text-white mt-2 md:mt-0 lg:mt-0">
+                                        <button className="btn btn-success rounded-xl sm:rounded-r-2xl px-3 py-2 text-white mt-2 md:mt-0 lg:mt-0">
                                             Register
                                         </button>
                                     </div>
@@ -58,15 +58,15 @@ function ClassDetail() {
                         <div className="card-body">
                             <div className="class-description-container">
                                 <div className="tab-menu-container">
-                                    <Link href="./class/detail" className="tab-menu active cursor-pointer text-link">
+                                    <Link href="./detail" className="tab-menu active cursor-pointer text-link text-base">
                                         Information
                                     </Link>
-                                    <Link href="./progress" className="tab-menu cursor-pointer text-link">
+                                    <Link href="./progress" className="tab-menu cursor-pointer text-link text-base">
                                         Class Progress
                                     </Link>
-                                    <div className="tab-menu">Class Discussion</div>
+                                    <div className="tab-menu text-base hidden sm:block">Class Discussion</div>
                                 </div>
-                                <div className="description">
+                                <div className="description text-base md:text-lg lg:text-xl">
                                     <h3>Description</h3>
                                     <p>
                                         Javascript from the basic for beginner. JavaScript is a programming language that adds
