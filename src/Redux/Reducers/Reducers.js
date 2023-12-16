@@ -7,7 +7,7 @@ import {
     REGISTER_REQUEST,
     REGISTER_SUCCESS,
     REGISTER_FAILURE,
-} from '../ActionCreators/ActionTypes';
+} from '../Actions/ActionTypes';
 
 const initialState = {
     token: null,

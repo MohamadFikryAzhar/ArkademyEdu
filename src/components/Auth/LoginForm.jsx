@@ -5,6 +5,8 @@ import Head from 'next/head';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 import Modal from './Modal';
+import { connect } from 'react-redux';
+import { loginUser } from '@/Redux/Actions/AuthActions';
 
 class LoginForm extends Component {
     state = {
@@ -35,33 +37,8 @@ class LoginForm extends Component {
 
         this.setState({ error: null, success: null });
 
-        try {
-            const result = await axios.post('http://localhost:4000/users/api/auth/login', body);
+        this.props.login(body);
 
-            console.log(result.data.success);
-            const token = result.data.data.result.token; // Update the access token
-            console.log(token);
-            const decoded = jwt.decode(token);
-            console.log(decoded);
-
-            this.setState({ success: 'Login Successful' });
-
-            this.setState({
-                userNameOrEmail: '',
-                password: '',
-            });
-
-            localStorage.setItem('token', `Bearer ${token}`);
-
-            if (result.data.success) {
-                decoded.role_id === 1
-                    ? window.location.replace('/user/dashboard')
-                    : window.location.replace('/fasilitator/dashboard');
-            }
-        } catch (err) {
-            this.setState({ error: 'Login Failed' });
-            console.error(err);
-        }
     };
     render() {
         return (
@@ -111,4 +88,4 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm
+export default connect(null, { loginUser })(LoginForm);
