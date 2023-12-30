@@ -1,5 +1,6 @@
 // Reducers.js
-'use client'
+'use clent'
+
 import {
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
@@ -33,7 +34,7 @@ export const registerReducer = (state = initialState, action) => {
         case REGISTER_REQUEST:
             return { ...state, loading: true, error: null };
         case REGISTER_SUCCESS:
-            return { ...state, loading: false, error: null };
+            return { ...initialState, loading: false, error: null };
         case REGISTER_FAILURE:
             return { ...state, loading: false, error: action.payload.error };
         default:

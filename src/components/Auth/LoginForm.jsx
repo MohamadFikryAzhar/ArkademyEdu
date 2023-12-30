@@ -37,7 +37,14 @@ class LoginForm extends Component {
 
         this.setState({ error: null, success: null });
 
-        this.props.login(body);
+        try {
+            await this.props.loginUser(userData);
+            this.setState({ success: 'Login Successful' });
+        } catch (err) {
+            this.setState({ error: 'Login Failed', loading: false });
+            console.error(err);
+        }
+        // this.props.loginUser(body);
 
     };
     render() {

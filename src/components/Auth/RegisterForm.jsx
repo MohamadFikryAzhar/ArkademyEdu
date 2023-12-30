@@ -1,8 +1,10 @@
+// RegisterForm.js
 'use client'
 import React, { Component } from 'react';
 import Link from 'next/link';
-import Axios from 'axios';
 import Modal from './Modal';
+import { connect } from 'react-redux';
+import { registerUser } from '@/Redux/Actions/AuthActions';
 
 class RegisterForm extends Component {
     state = {
@@ -12,7 +14,7 @@ class RegisterForm extends Component {
         passwordMatch: '',
         error: null,
         success: null,
-        loading: false, // Add loading state
+        loading: false,
     };
 
     handleChange = (e) => {
@@ -29,42 +31,25 @@ class RegisterForm extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         const { username, email, password, passwordMatch } = this.state;
-        const body = {
+        const userData = {
             username,
             email,
             password,
             passwordMatch,
         };
 
-        // Set loading to true to indicate the start of the registration process
         this.setState({ loading: true, success: null, error: null });
 
         try {
-            const result = await Axios.post('http://localhost:4000/users/api/auth/register', body);
-
-            // Display a modal for successful registration
-            this.setState({ success: 'Register Complete' });
-
-            if (result.data.success) {
-                window.location.replace('/auth/login');
-            }
-
-            console.log(result);
-
-            // Reset the form and loading state after registration
-            this.setState({
-                username: '',
-                email: '',
-                password: '',
-                passwordMatch: '',
-                loading: false,
-            });
+            await this.props.registerUser(userData);
+            this.setState({ success: 'Registration Successful' });
         } catch (err) {
-            // Display a modal for registration failure
-            this.setState({ error: 'Register Failed', loading: false });
+            this.setState({ error: 'Registration Failed', loading: false });
             console.error(err);
         }
-    }; render() {
+    };
+
+    render() {
         return (
             <div className="container mx-auto p-4">
                 <div className="lg:w-full md:w-full sm:w-1/2">
@@ -123,4 +108,4 @@ class RegisterForm extends Component {
     }
 }
 
-export default RegisterForm
+export default connect(null, { registerUser })(RegisterForm);
